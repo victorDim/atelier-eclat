@@ -1,0 +1,32 @@
+{
+  "orders": [
+    {
+      "customer": {
+        "name": "Ava",
+        "email": "ava@example.com"
+      },
+      "payment": {
+        "cardLast4": "4242",
+        "expiry": "12/30",
+        "cvc": "123"
+      },
+      "items": [
+        {
+          "name": "Solstice Ring",
+          "price": 4800,
+          "quantity": 1
+        }
+      ],
+      "total": 4800,
+      "receivedAt": "2026-07-06T14:50:58.506Z"
+    }
+  ],
+  "inquiries": [
+    {
+      "name": "Ava",
+      "email": "ava@example.com",
+      "message": "Hello",
+      "receivedAt": "2026-07-06T14:50:49.279Z"
+    }
+  ]
+}

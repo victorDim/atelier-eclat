@@ -3,145 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atelier Éclat | Fine Jewelry</title>
-    <meta
-      name="description"
-      content="Discover timeless fine jewelry crafted with precision, elegance, and personal meaning."
-    />
+    <title>Atelier Éclat | Premium Jewelry Boutique</title>
+    <meta name="description" content="Shop luxury fine jewelry online with bespoke rings, necklaces, and bracelets crafted for lasting beauty and personal meaning." />
+    <meta name="theme-color" content="#1f1714" />
+    <meta property="og:title" content="Atelier Éclat | Premium Jewelry Boutique" />
+    <meta property="og:description" content="Discover heirloom-quality jewelry designed for celebration, legacy, and everyday elegance." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <header class="hero">
       <nav class="nav container">
         <a href="#" class="brand">Atelier Éclat</a>
         <div class="nav-links">
-          <a href="#collections">Collections</a>
-          <a href="#craftsmanship">Craftsmanship</a>
+          <a href="#shop">Shop</a>
+          <a href="#services">Services</a>
+          <a href="#story">Our Story</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="account.html">Account</a>
+          <a href="checkout.html">Checkout</a>
           <a href="#contact">Contact</a>
+          <button class="cart-toggle" id="cartToggle" type="button">Cart <span id="cartCount">0</span></button>
         </div>
       </nav>
 
       <div class="hero-content container">
         <div class="hero-copy">
-          <p class="eyebrow">Fine Jewelry · Made to Last</p>
-          <h1>Where heirloom beauty meets modern brilliance.</h1>
-          <p class="lead">
-            Discover handcrafted rings, necklaces, and bespoke pieces designed to mark life’s most meaningful moments.
-          </p>
+          <p class="eyebrow">Luxury Fine Jewelry · Online Boutique</p>
+          <h1>Elevated pieces for modern heirlooms.</h1>
+          <p class="lead">Browse signature rings, sculptural necklaces, and custom commissions crafted with exceptional detail, rare materials, and timeless elegance.</p>
           <div class="hero-actions">
-            <a href="#collections" class="btn btn-primary">Explore Collection</a>
-            <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
+            <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+            <a href="#contact" class="btn btn-secondary">Book a Private Consultation</a>
           </div>
           <ul class="trust-list">
             <li>Certified diamonds</li>
             <li>Ethically sourced gold</li>
-            <li>Custom design services</li>
+            <li>Complimentary styling support</li>
           </ul>
         </div>
         <div class="hero-card">
-          <img
-            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
-            alt="Elegant diamond jewelry on display"
-          />
+          <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80" alt="Luxury jewelry displayed in a refined studio setting" />
         </div>
       </div>
     </header>
 
     <main>
-      <section class="section container" id="collections">
+      <section class="section container highlights">
+        <div class="highlight-card"><h3>Insured delivery</h3><p>Every order is carefully packed and fully insured for safe arrival.</p></div>
+        <div class="highlight-card"><h3>Lifetime care</h3><p>Enjoy complimentary polishing and maintenance guidance for your collection.</p></div>
+        <div class="highlight-card"><h3>Custom design</h3><p>Transform a vision into a one-of-a-kind piece with our private design team.</p></div>
+      </section>
+
+      <section class="section container" id="shop">
         <div class="section-heading">
-          <p class="eyebrow">Featured Collections</p>
-          <h2>Signature pieces for everyday luxury.</h2>
+          <p class="eyebrow">Featured Pieces</p>
+          <h2>Discover the collection.</h2>
         </div>
-        <div class="cards">
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="Diamond engagement ring" />
-            <div class="card-body">
-              <h3>Solstice Rings</h3>
-              <p>Brilliant stones set in sculptural gold bands.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Golden necklace" />
-            <div class="card-body">
-              <h3>Aurelia Necklaces</h3>
-              <p>Layered silhouettes with luminous diamond accents.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80" alt="Luxury bracelet" />
-            <div class="card-body">
-              <h3>Velvet Bracelets</h3>
-              <p>Refined craftsmanship with a soft, modern glow.</p>
-            </div>
-          </article>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section craftsmanship" id="services">
+        <div class="container craftsmanship-grid">
+          <div>
+            <p class="eyebrow">Craftsmanship & Services</p>
+            <h2>Luxury service from consultation to delivery.</h2>
+            <p>Each order is supported by private consultation, concierge styling, and secure fulfillment designed for a seamless experience.</p>
+          </div>
+          <div class="stats">
+            <div><strong>24/7</strong><span>Private concierge support</span></div>
+            <div><strong>100%</strong><span>Hand-finished detail</span></div>
+            <div><strong>1:1</strong><span>Design consultations</span></div>
+          </div>
         </div>
       </section>
 
-      <section class="section craftsmanship" id="craftsmanship">
-        <div class="container craftsmanship-grid">
-          <div>
-            <p class="eyebrow">Craftsmanship</p>
-            <h2>Every piece is shaped with intention.</h2>
-            <p>
-              Our artisans blend traditional techniques with contemporary design to create jewelry that feels both timeless and personal.
-            </p>
-          </div>
-          <div class="stats">
-            <div>
-              <strong>25+</strong>
-              <span>Years of expertise</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Hand-finished details</span>
-            </div>
-            <div>
-              <strong>1:1</strong>
-              <span>Personal design consultations</span>
-            </div>
-          </div>
+      <section class="section container story" id="story">
+        <div class="story-copy">
+          <p class="eyebrow">Our Story</p>
+          <h2>Designed to honor beauty, memory, and legacy.</h2>
+          <p>Atelier Éclat was built around the belief that jewelry should preserve feeling as much as beauty. Every commission is thoughtfully considered and carefully crafted to become part of your story.</p>
+        </div>
+        <div class="story-panel">
+          <div><h3>Private studio appointments</h3><p>Explore silhouettes, gemstones, and symbolism in a refined private setting.</p></div>
+          <div><h3>Ethical sourcing</h3><p>Premium materials are chosen with care, transparency, and respect for craftsmanship.</p></div>
         </div>
       </section>
 
       <section class="section container testimonials">
         <div class="section-heading">
           <p class="eyebrow">Client Love</p>
-          <h2>Trusted by those who value elegance.</h2>
+          <h2>Trusted by clients who value elegance and discretion.</h2>
         </div>
         <div class="testimonial-list">
-          <blockquote>
-            “The attention to detail was extraordinary. My ring feels like a true heirloom.”
-            <footer>— Maya & Daniel</footer>
-          </blockquote>
-          <blockquote>
-            “An unforgettable experience from concept to reveal. The piece is timeless.”
-            <footer>— Sofia L.</footer>
-          </blockquote>
+          <blockquote>“The experience felt as luxurious as the piece itself. Every detail was handled with care.”<footer>— Maya & Daniel</footer></blockquote>
+          <blockquote>“The service, presentation, and craftsmanship were extraordinary from start to finish.”<footer>— Sofia L.</footer></blockquote>
         </div>
       </section>
     </main>
 
+    <aside class="cart-overlay" id="cartOverlay"></aside>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button type="button" id="closeCart" class="close-cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+        <button type="button" class="btn btn-primary wide" id="checkoutBtn">Reserve this selection</button>
+        <p id="checkoutMessage" class="checkout-message"></p>
+      </div>
+    </aside>
+
     <footer class="footer" id="contact">
       <div class="container footer-content">
         <div>
-          <p class="eyebrow">Visit the Studio</p>
-          <h2>Let’s create something extraordinary.</h2>
+          <p class="eyebrow">Private Studio Consultation</p>
+          <h2>Let’s create something extraordinary together.</h2>
+          <p class="footer-text">Your information is handled with care and is never shared without consent. Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
         </div>
         <form class="contact-form" id="contactForm">
-          <input type="text" placeholder="Your name" required />
-          <input type="email" placeholder="Email address" required />
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+          <textarea name="message" placeholder="Tell us about your vision" required></textarea>
+          <input type="text" name="company" id="company" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true" />
           <button type="submit" class="btn btn-primary">Request a Consultation</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div class="container footer-bottom">
         <p>© <span id="year"></span> Atelier Éclat. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
       </div>
     </footer>
 

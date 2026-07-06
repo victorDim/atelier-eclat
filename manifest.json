@@ -1,0 +1,9 @@
+{
+  "name": "Atelier Éclat",
+  "short_name": "AtelierÉclat",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffaf7",
+  "theme_color": "#1f1714",
+  "icons": []
+}

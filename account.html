@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account | Atelier Éclat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero detail-hero">
+      <nav class="nav container">
+        <a href="index.html" class="brand">Atelier Éclat</a>
+        <div class="nav-links">
+          <a href="index.html#shop">Shop</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="checkout.html">Checkout</a>
+          <button class="cart-toggle" id="cartToggle" type="button">Cart <span id="cartCount">0</span></button>
+        </div>
+      </nav>
+      <div class="container detail-hero-content">
+        <div class="detail-copy">
+          <p class="eyebrow">Client Account</p>
+          <h1>Your private concierge account.</h1>
+          <p class="lead">Save favorites, track reservations, and receive tailored recommendations from our studio team.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container section account-page">
+      <div class="checkout-card">
+        <h2>Create or sign in</h2>
+        <form id="accountForm" class="contact-form checkout-form">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <button class="btn btn-primary" type="submit">Access account</button>
+          <p id="accountStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="checkout-card">
+        <h2>Account overview</h2>
+        <div id="accountOverview" class="account-overview"></div>
+        <h3>Saved wishlist</h3>
+        <div id="wishlistItems" class="account-overview"></div>
+      </div>
+    </main>
+
+    <aside class="cart-overlay" id="cartOverlay"></aside>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button type="button" id="closeCart" class="close-cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+        <a class="btn btn-primary wide" href="checkout.html">Continue to Checkout</a>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
